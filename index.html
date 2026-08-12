@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 20th Birthday! | Officially An Unc 🎉</title>
+    <meta name="description" content="Happy 20th Birthday! Celebrating 20 years of iconic vibes, legendary quotes, and officially unlocking Unc status!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Outfit:wght@400;600;800;900&family=Permanent+Marker&family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Canvas for Confetti & Particles -->
+    <canvas id="particleCanvas"></canvas>
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Top Navigation Header -->
+    <header class="app-header">
+        <div class="brand">
+            <span class="badge-tag">2006 BORN</span>
+            <h1 class="brand-title">UNC <span class="accent-text">LEVEL 20</span></h1>
+        </div>
+        <div class="header-controls">
+            <button id="soundToggleBtn" class="control-btn" title="Toggle Sound FX & Music">
+                <span class="btn-icon" id="soundIcon">🔊</span>
+                <span class="btn-label">Music & FX</span>
+            </button>
+            <button id="quickConfettiBtn" class="control-btn accent-btn">
+                <span class="btn-icon">🎉</span>
+                <span class="btn-label">Party Cannon!</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Floating Soundwave Visualizer Bar -->
+    <div class="audio-visualizer-bar" id="audioBarContainer">
+        <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+        <div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div><div class="v-bar"></div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="main-wrapper">
+
+        <!-- Hero Section: Central Birthday Poster -->
+        <section class="hero-section">
+            <div class="poster-container" id="posterContainer">
+                <div class="poster-card" id="posterCard">
+                    <!-- Dynamic Glowing Backdrop -->
+                    <div class="poster-glow"></div>
+                    
+                    <!-- Main Poster Image -->
+                    <img src="Black and Orange Modern Bold Vintage Illustrative Don’t Talk T-Shirt.png" alt="Happy Birthday Poster - 2006 Born Officially An Unc" class="poster-img" id="posterImg">
+
+                    <!-- Interactive Floating Hearts Doodle Effect -->
+                    <div class="doodle-crown">
+                        <span class="floating-heart h1">❤️</span>
+                        <span class="floating-heart h2">🤍</span>
+                        <span class="floating-heart h3">❤️</span>
+                        <span class="floating-heart h4">🤍</span>
+                        <span class="floating-heart h5">❤️</span>
+                    </div>
+
+                    <!-- Speech Bubble Popup Container -->
+                    <div class="speech-bubble-overlay" id="speechBubble">
+                        <div class="bubble-content" id="bubbleText">"ISOKAY BETU!"</div>
+                        <div class="bubble-tail"></div>
+                    </div>
+
+                    <!-- 3D Specular Light Overlay -->
+                    <div class="shine-overlay"></div>
+                </div>
+
+                <div class="poster-hint">
+                    <span class="hint-icon">✨</span> Hover & move around for 3D depth | Click quotes below for expressions!
+                </div>
+            </div>
+        </section>
+
+        <!-- Catchphrase Soundboard Section -->
+        <section class="section quotes-section">
+            <div class="section-header">
+                <span class="section-subtitle">ICONIC EXPRESSIONS</span>
+                <h2 class="section-title">The Catchphrase Soundboard 🗣️</h2>
+                <p class="section-desc">Click any of her signature phrases to trigger sound effects & secret birthday reactions!</p>
+            </div>
+
+            <div class="quotes-grid">
+                <button class="quote-chip" data-phrase="OKAY" data-sound="okay">
+                    <span class="quote-text">"OKAY"</span>
+                    <span class="quote-desc">Classic nod of agreement</span>
+                </button>
+                <button class="quote-chip" data-phrase="THANKS" data-sound="thanks">
+                    <span class="quote-text">"THANKS"</span>
+                    <span class="quote-desc">Polite with a smile</span>
+                </button>
+                <button class="quote-chip highlight" data-phrase="ACCHA" data-sound="accha">
+                    <span class="quote-text">"ACCHA"</span>
+                    <span class="quote-desc">Plotting / Understanding mode</span>
+                </button>
+                <button class="quote-chip" data-phrase="HAAN" data-sound="haan">
+                    <span class="quote-text">"HAAN"</span>
+                    <span class="quote-desc">Confident & quick response</span>
+                </button>
+                <button class="quote-chip" data-phrase="KYA" data-sound="kya">
+                    <span class="quote-text">"KYA"</span>
+                    <span class="quote-desc">Drama / Confusion alert!</span>
+                </button>
+                <button class="quote-chip hero-quote" data-phrase="ISOKAY BETU" data-sound="isokay">
+                    <span class="quote-badge">⭐ FAVORITE</span>
+                    <span class="quote-text">"ISOKAY BETU"</span>
+                    <span class="quote-desc">Ultimate comforting vibe</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- "Officially An Unc" Level 20 Stats & License -->
+        <section class="section license-section">
+            <div class="license-card">
+                <div class="license-header">
+                    <div class="license-stamp">OFFICIAL VERIFIED</div>
+                    <div class="license-title-box">
+                        <h3>UNC LEVEL 20 PASS 💳</h3>
+                        <span class="license-id">ID: 0123A456B-789(C)</span>
+                    </div>
+                </div>
+
+                <div class="license-body">
+                    <div class="stat-box">
+                        <div class="stat-value" id="daysAliveCount">7,305</div>
+                        <div class="stat-label">Days Of Greatness</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">2006 ➔ 2026</div>
+                        <div class="stat-label">Birth Era</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Iconic Energy</div>
+                    </div>
+                </div>
+
+                <div class="attributes-grid">
+                    <div class="attr-item">
+                        <span class="attr-name">Wisdom Level</span>
+                        <div class="bar-container"><div class="bar-fill" style="width: 95%;"></div></div>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-name">"Unc" Vibe Rating</span>
+                        <div class="bar-container"><div class="bar-fill" style="width: 100%;"></div></div>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-name">Patience For Drama</span>
+                        <div class="bar-container"><div class="bar-fill warning" style="width: 15%;"></div></div>
+                    </div>
+                    <div class="attr-item">
+                        <span class="attr-name">Main Character Aura</span>
+                        <div class="bar-container"><div class="bar-fill" style="width: 98%;"></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Birthday Cake & Candles Game -->
+        <section class="section cake-section" id="cakeSection">
+            <div class="section-header">
+                <span class="section-subtitle">MAKE A WISH!</span>
+                <h2 class="section-title">Blow Out the 20th Birthday Candles 🎂</h2>
+                <p class="section-desc">Click the candles or hit the blow button to make a birthday wish and light up the sky!</p>
+            </div>
+
+            <div class="cake-container">
+                <div class="cake" id="cake">
+                    <!-- Candles layer -->
+                    <div class="candles-rack" id="candlesRack">
+                        <!-- 20 candles dynamically or styled -->
+                    </div>
+
+                    <!-- Cake Layers -->
+                    <div class="cake-top-frosting"></div>
+                    <div class="cake-layer layer-top">
+                        <div class="drip drip-1"></div>
+                        <div class="drip drip-2"></div>
+                        <div class="drip drip-3"></div>
+                    </div>
+                    <div class="cake-layer layer-middle"></div>
+                    <div class="cake-layer layer-bottom"></div>
+                    <div class="cake-plate"></div>
+                </div>
+
+                <div class="cake-controls">
+                    <button class="cake-btn" id="blowBtn">💨 Blow Candles Out!</button>
+                    <button class="cake-btn secondary" id="relightBtn">🔥 Relight Candles</button>
+                </div>
+                
+                <div class="wish-status" id="wishStatusText">
+                    20 Candles Burning Bright! Click candles or tap blow button!
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Wish Wall Section -->
+        <section class="section wish-wall-section">
+            <div class="section-header">
+                <span class="section-subtitle">BIRTHDAY LOVE</span>
+                <h2 class="section-title">Leave a Birthday Wish 💌</h2>
+                <p class="section-desc">Add your message to the birthday pinboard!</p>
+            </div>
+
+            <!-- Wish Input Form -->
+            <div class="wish-form-card">
+                <form id="wishForm">
+                    <div class="form-row">
+                        <input type="text" id="senderName" placeholder="Your Name / Nickname" required maxlength="30">
+                        <select id="cardColor">
+                            <option value="orange">🍊 Warm Orange</option>
+                            <option value="red">❤️ Crimson Red</option>
+                            <option value="yellow">⭐ Golden Yellow</option>
+                            <option value="dark">🖤 Sleek Black</option>
+                        </select>
+                    </div>
+                    <textarea id="wishMessage" placeholder="Write a hilarious or sweet birthday wish for her 20th birthday..." required maxlength="250" rows="3"></textarea>
+                    <button type="submit" class="submit-wish-btn">📌 Pin Birthday Wish!</button>
+                </form>
+            </div>
+
+            <!-- Wish Cards Grid -->
+            <div class="wishes-board" id="wishesBoard">
+                <!-- Pre-populated Cards -->
+                <div class="wish-card color-orange">
+                    <div class="wish-pin">📌</div>
+                    <div class="wish-author">Bestie</div>
+                    <p class="wish-text">HAPPY 20TH BIRTHDAY!! Welcome to the 20s club & Unc status! Stay iconic and never stop saying "Isokay betu"! 🥳🎉</p>
+                    <div class="wish-time">Just now</div>
+                </div>
+                <div class="wish-card color-red">
+                    <div class="wish-pin">📌</div>
+                    <div class="wish-author">The Squad</div>
+                    <p class="wish-text">2006 borns are officially old now 😂! Hope your day is filled with cake, laughter, and zero drama! "Accha"? ❤️</p>
+                    <div class="wish-time">Just now</div>
+                </div>
+                <div class="wish-card color-yellow">
+                    <div class="wish-pin">📌</div>
+                    <div class="wish-author">Secret Admirer</div>
+                    <p class="wish-text">Level 20 looks amazing on you! May this year bring endless happiness, success, and good vibes! 🎂✨</p>
+                    <div class="wish-time">Just now</div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-content">
+            <p>Made with ❤️ for a Legendary 20th Birthday Celebration!</p>
+            <p class="footer-tagline">"2006 Born - Officially An Unc"</p>
+        </div>
+    </footer>
+
+    <!-- Audio FX & Synth Script & Main JS -->
+    <script src="app.js"></script>
+</body>
+</html>
