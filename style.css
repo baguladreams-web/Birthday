@@ -882,3 +882,157 @@ select option {
     font-size: 1.3rem !important;
     margin-top: 0.5rem;
 }
+
+/* ==========================================================================
+   Comprehensive Mobile & Tablet Responsive Media Queries
+   ========================================================================== */
+
+/* Tablet & Mobile Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .app-header {
+        padding: 0.8rem 1rem;
+    }
+
+    .brand-title {
+        font-size: 1.2rem;
+    }
+
+    .badge-tag {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+    .control-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .main-wrapper {
+        padding: 1rem 1rem 4rem 1rem;
+    }
+
+    .hero-section {
+        padding: 1rem 0 2.5rem 0;
+    }
+
+    .poster-container {
+        max-width: 92vw;
+    }
+
+    .doodle-crown {
+        top: 13%;
+        gap: 6px;
+    }
+
+    .floating-heart {
+        font-size: 1rem;
+    }
+
+    .speech-bubble-overlay {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .section {
+        margin-top: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .section-desc {
+        font-size: 0.9rem;
+    }
+
+    .license-card {
+        padding: 1.5rem;
+        border-radius: 18px;
+    }
+
+    .license-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .license-stamp {
+        align-self: flex-start;
+    }
+
+    .stat-value {
+        font-size: 1.2rem;
+    }
+
+    .cake {
+        transform: scale(0.9);
+        margin-bottom: 1rem;
+    }
+
+    .cake-controls {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .cake-btn {
+        width: 100%;
+        padding: 0.75rem 1.2rem;
+        font-size: 0.95rem;
+    }
+
+    .wish-form-card {
+        padding: 1.2rem;
+    }
+}
+
+/* Small Mobile Screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .btn-label {
+        display: none;
+    }
+
+    .control-btn {
+        padding: 0.5rem 0.7rem;
+        border-radius: 50%;
+    }
+
+    .quotes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+
+    .quote-chip {
+        padding: 1rem 0.6rem;
+    }
+
+    .quote-text {
+        font-size: 1.2rem;
+    }
+
+    .hero-quote .quote-text {
+        font-size: 1.4rem;
+    }
+
+    .quote-desc {
+        font-size: 0.7rem;
+    }
+
+    .license-body {
+        grid-template-columns: 1fr;
+        gap: 0.8rem;
+    }
+
+    .attributes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .wishes-board {
+        grid-template-columns: 1fr;
+    }
+
+    .cake {
+        transform: scale(0.8);
+    }
+}
+
